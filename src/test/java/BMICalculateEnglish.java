@@ -4,9 +4,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BMICalculateEnglish extends BaseTest{
+    public String URL = "https://healthunify.com/bmicalculator/";
 
     @Test
     public void NormalWeightInPoundsSelect(){
+        driver.get(URL);
+
         Select weightSelect = new Select(driver.findElement(By.name("opt1")));
         Select heightFirstSelect = new Select(driver.findElement(By.name("opt2")));
         Select heightSecondSelect = new Select(driver.findElement(By.name("opt3")));
@@ -33,6 +36,8 @@ public class BMICalculateEnglish extends BaseTest{
 
     @Test
     public void ObeseWeightInPoundsSelect(){
+        driver.get(URL);
+
         Select weightSelect = new Select(driver.findElement(By.name("opt1")));
         Select heightFirstSelect = new Select(driver.findElement(By.name("opt2")));
         Select heightSecondSelect = new Select(driver.findElement(By.name("opt3")));
